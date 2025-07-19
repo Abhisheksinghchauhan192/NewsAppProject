@@ -13,7 +13,7 @@
 - 🌍 **News Filtering**
   - Filter news by **category** (e.g., Sports, Tech, Business)
   - Select **geographical region** (country-specific news)
-  - Choose the **number of articles** to display
+  - Search Based on  ** Keywords** For Specific News
 
 - 📱 **Responsive & Clean UI**
   - Mobile-friendly design(under development)
@@ -33,11 +33,11 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript (or React if applicable)
+- **Frontend**: HTML, CSS, JavaScript 
 - **API**: [NewsAPI](https://newsapi.org/)
 - **Under Development**:
-- **Backend**: Node.js / Express (if applicable)
-- **Authentication**: Local/Auth library (e.g., Firebase, JWT, Passport.js)
+- **Backend**: Node.js , Express ,Mysql
+- **Authentication**: Local
 
 ---
 

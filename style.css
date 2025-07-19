@@ -197,10 +197,11 @@ body {
     margin: -15px 0 15px 0;
 }
 
-.remember-forgot label input {
+.remember-forgot label input,label {
     accent-color: #e4e4e4;
     margin-right: 14px;
 }
+
 
 .remember-forgot a {
     text-decoration: none;
