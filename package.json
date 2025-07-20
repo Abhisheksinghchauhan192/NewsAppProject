@@ -1,0 +1,23 @@
+{
+  "name": "newsapp",
+  "version": "1.0.0",
+  "description": "**NewApp** is a sleek and user-friendly web application that delivers news tailored to your interests and location. Instead of browsing multiple websites, users can get the latest news filtered by category, region, and number of articles — all in one place. The app integrates **NewsAPI** and allows each user to authenticate and use their own API key for a customized experience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhisheksinghchauhan192/NewAppProject.git"
+  },
+  "author": "Abhishek Singh Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhisheksinghchauhan192/NewAppProject/issues"
+  },
+  "homepage": "https://github.com/Abhisheksinghchauhan192/NewAppProject#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
