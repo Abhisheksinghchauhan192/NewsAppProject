@@ -3,6 +3,21 @@
 let typewriterobj = document.querySelector("#typewriter");
 const msg = "Your Personal News";
 
+// instructioon pop up logic 
+const infobtn = document.getElementById("insbtn");
+infobtn.addEventListener("click",()=>{
+    openLoginInstruction();
+});
+
+function openLoginInstruction() {
+  document.getElementById("loginInstructionPopup").classList.remove("hidden");
+}
+
+function closeLoginInstruction() {
+  document.getElementById("loginInstructionPopup").classList.add("hidden");
+}
+
+
 let charIndex = 0;
 function typewriter(){
 

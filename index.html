@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Get Your News</title>
     <script>
-      if(localStorage.getItem("newsProjectUserEmail") && localStorage.getItem("newsProjectUserPassword") && localStorage.getItem("newsProjectUserApiKey")){
-        window.location.href="./homepage.html";
+      if (
+        localStorage.getItem("newsProjectUserEmail") &&
+        localStorage.getItem("newsProjectUserPassword") &&
+        localStorage.getItem("newsProjectUserApiKey")
+      ) {
+        window.location.href = "./homepage.html";
       }
     </script>
-    
+
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -43,24 +47,12 @@
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/">Instructions</a>
-        <a href="">Contact Us</a>
+        <a >Home</a>
+        <a id="insbtn">Instructions</a>
+        <a >Contact Us</a>
       </nav>
     </header>
     <div class="background"></div>
-
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="hideModal()">×</span>
-        <div class="icon">
-          <i class="fas fa-check-circle success-icon"></i>
-        </div>
-        <h3>Success</h3>
-        <p>Message goes here</p>
-        <button class="btn-ok" onclick="hideModal()">OK</button>
-      </div>
-    </div>
 
     <div class="container">
       <div class="content">
@@ -102,7 +94,7 @@
             </div>
             <div class="input-box">
               <span class="icon"><i class="fa-solid fa-key"></i></span>
-              <input type="password" id="apikey" name="key" required>
+              <input type="password" id="apikey" name="key" required />
               <label for="key">Key</label>
             </div>
             <div class="remember-forgot">
@@ -115,6 +107,104 @@
             <button type="submit">Sign In</button>
           </form>
         </div>
+      </div>
+    </div>
+
+    <!-- Instruction Popup for Login Page -->
+    <div id="loginInstructionPopup" class="instruction-overlay hidden">
+      <div class="instruction-box">
+        <button class="close-btn" onclick="closeLoginInstruction()">✖</button>
+        <h2>🔐 Instructions for Login & API Key Setup</h2>
+
+        <p>
+          Welcome! To access the news dashboard, you must provide the following
+          details:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Email:</strong> Enter your email address. It's used to
+            identify your account.
+          </li>
+          <li>
+            <strong>Password:</strong> Choose a secure password to protect your
+            account.
+          </li>
+          <li>
+            <strong>API Key:</strong> This is the most important part. It is
+            used to connect to the
+            <a href="https://newsapi.org" target="_blank">NewsAPI.org</a> and
+            fetch live news.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>🛠️ How to Get Your NewsAPI Key (Free & Safe)</h3>
+
+        <p>
+          Follow these steps to generate your free API key from
+          <strong>NewsAPI.org</strong>:
+        </p>
+
+        <ol>
+          <li>
+            Visit:
+            <a href="https://newsapi.org/register" target="_blank"
+              >https://newsapi.org/register</a
+            >
+          </li>
+          <li>
+            Fill in the registration form with:
+            <ul>
+              <li>📝 <strong>Name</strong></li>
+              <li>
+                📧 <strong>Email Address</strong> (use the same email as in your
+                login form if possible)
+              </li>
+              <li>🔒 <strong>Password</strong> (any safe password)</li>
+            </ul>
+          </li>
+          <li>Click on the <strong>Sign Up</strong> button.</li>
+          <li>
+            Once logged in, go to the <strong>API Keys</strong> section (usually
+            available from your dashboard or menu).
+          </li>
+          <li>
+            You’ll see a key like this:
+            <pre
+              style="background: #f3f3f3; padding: 6px 10px; border-radius: 6px"
+            >
+e3a5ab4f2e8e4e3ea7123456e9bd2c50</pre
+            >
+            Copy this key.
+          </li>
+          <li>
+            Paste the copied API key into the <strong>API Key</strong> box in
+            your login form.
+          </li>
+        </ol>
+
+        <hr />
+
+        <h3>✅ After Entering the Details</h3>
+        <ul>
+          <li>Click the <strong>Sign In</strong> button.</li>
+          <li>
+            You’ll be logged in and redirected to the
+            <strong>Home Page</strong> where you can start fetching and
+            exploring news.
+          </li>
+          <li>
+            Make sure to keep your API key secure and never share it publicly.
+          </li>
+        </ul>
+
+        <p style="margin-top: 1rem">
+          <strong>Note:</strong> NewsAPI Developer plan only allows API usage
+          from <code>localhost</code>. To use it live, you need to host the
+          backend or upgrade your plan.
+        </p>
       </div>
     </div>
 
