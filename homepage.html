@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>Get Your News</title>
     <link rel="stylesheet" href="homestyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,9 +75,9 @@
             <option value="health">Health</option>
             <option value="business">Business</option>
           </select>
-          <label for="fromDate">From Date </label>
+          <label for="fromDate">FromDate </label>
           <input type="date" id="fromDate" />
-          <label for="toDate">To Date</label>
+          <label for="toDate">ToDate</label>
           <input type="date" id="toDate" />
 
           <label for="sortBy">Sort By</label>
@@ -94,10 +94,12 @@
             <option value="fr">French</option>
           </select>
 
-          <button id="getbtn">🔎 Get News</button>
+          <div class="get-btn-center">
+            <button id="getbtn">🔎 Get News</button>
+          </div>
+          
         </form>
       </div>
-      <div class="seprator"></div>
       <div class="panel right" id="rightpanel">
         <div class="news-container" id="show"></div>
       </div>

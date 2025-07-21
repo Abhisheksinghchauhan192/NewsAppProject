@@ -122,12 +122,14 @@ getbtn.addEventListener("click", (event) => {
         {
           urlToImage: "",
           title:
-            "You have messed with the Api Key Please Log out and enter the key again ",
+            `!!!!!! API KEY ERROR !!!!! `,
           source: { name: "NULL" },
           content: "NULL",
           publishedAt: "NULL",
-          description: "NULL",
-        },
+          description: `You have messed with the Api Key 
+            Or You have a Developer Plan Api Key which not Support Cross Origin Request
+            Please Log out and enter the key again. If On developer Plan Run in your Local system  Or by the Key from NewsApi `,
+        }
       ]);
     });
 });
@@ -150,12 +152,14 @@ bnews.addEventListener("click", () => {
         {
           urlToImage: "",
           title:
-            "You have messed with the Api Key Please Log out and enter the key again ",
+            `!!!!!! API KEY ERROR !!!!! `,
           source: { name: "NULL" },
           content: "NULL",
           publishedAt: "NULL",
-          description: "NULL",
-        },
+          description: `You have messed with the Api Key 
+            Or You have a Developer Plan Api Key which not Support Cross Origin Request
+            Please Log out and enter the key again. If On developer Plan Run in your Local system Or by the Key from NewsApi `,
+        }
       ]);
     });
 });
@@ -165,6 +169,7 @@ function showData(data) {
   for (let news of data) {
     const newsitem = document.createElement("div");
     newsitem.classList.add("news-container");
+    newsitem.classList.add("news-item");
     // adding image
     const image = document.createElement("img");
     image.src = news.urlToImage || "./assests/images/noimage.webp";
