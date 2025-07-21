@@ -54,9 +54,9 @@ getbtn.addEventListener("click", (event) => {
   const from = document.getElementById("fromDate").value;
   const to = document.getElementById("toDate").value;
   const sortBy = document.getElementById("sortBy").value;
-  const language = document.getElementById("language").value;
+  const language = document.getElementById("language").value; 
 
-  // TODO: build query for api endpoint.
+
   console.log(q);
   console.log(country);
   console.log(category);
@@ -94,9 +94,13 @@ getbtn.addEventListener("click", (event) => {
       query += `category=${category}&`;
     }
   }
-
   query += `apiKey=${localStorage.getItem("newsProjectUserApiKey")}`;
-
+  
+  if(!q && !country && !category && !from && !to){
+    query = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${localStorage.getItem(
+      "newsProjectUserApiKey"
+    )}`;
+  }
   // make fetch request for the news.
   fetch(query)
     .then((res) => res.json())
