@@ -4,10 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: #222831;
-  height: 100vh;
 }
 
 /* Setting the scrollBar for the entire page  */
@@ -38,6 +39,10 @@ body{
   height: 3rem;
   align-items: center;
   background-color: #222831;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2000;
 }
 
 .start-nav{
@@ -93,7 +98,8 @@ a {
 }
 
 .panel {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 20px;
   min-width: 200px;
 }
@@ -105,6 +111,7 @@ a {
   background-color:#222831;
   align-items: center;
   padding: 1rem;
+  padding-top: 10rem;
   overflow: auto;
   width: 599px;
   gap: 3rem;
@@ -147,6 +154,7 @@ a {
 .breaking:hover {
   transform: translateY(-2px);
   box-shadow: 1px 2px 4px wheat;
+  background-color: #04929a;
 }
 
 .filter-container h2 {
@@ -229,8 +237,13 @@ a {
   border-radius: 15px ;
   
 }
+
+.news-item:hover{
+  transform: scale(1.005);
+  box-shadow: 1px 1px 20px #031b28;
+}
 .news-container img{
-  width:400px;
+  width:350px;
   border-radius: 20px;
   align-self: center;
   
@@ -275,7 +288,42 @@ a {
 .news-container .news-content a{
   color:#04929a;
 }
-/* Instruction Popup Styles */
+
+.news-content ul li{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  list-style: none;
+  color:#04929a
+}
+.news-content ul li ul li{
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color:#EEEEEE;
+}
+.footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: #393E46;
+    color:#EEEEEE;
+}
+
+.footer a{
+    text-decoration: none;
+    color:#49a09d;
+}
+
+.footer p{
+margin: 0.3rem;}
+
+/* Instruction Overlay */
 .instruction-overlay {
   position: fixed;
   top: 0;
@@ -288,21 +336,39 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 1rem;
 }
 
+/* Scrollable Instruction Box */
 .instruction-box {
   background: #b4aaaa;
-  color: #000000;
+  color: #000;
   padding: 2rem;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  max-height: 90vh;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
-  animation: fadeInUp 0.6s ease-out;
-  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInUp 0.3s ease-out;
+}
+.instruction-box::-webkit-scrollbar {
+  width: 6px;
+  background: #e1bee7;
+  border-radius: 5px;
+}
+.instruction-box::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7f53ac, #647dee);
+  border-radius: 8px;
+  border: 2px solid #e1bee7;
+}
+.instruction-box::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
 }
 
+/* Add spacing between paragraphs and elements */
 .instruction-box p,
 .instruction-box li,
 .instruction-box h2,
@@ -310,8 +376,10 @@ a {
 .instruction-box ul,
 .instruction-box ol {
   margin-bottom: 1rem;
-  line-height: 1.4;
+  line-height: 1.6;
 }
+
+/* Close button */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -320,14 +388,14 @@ a {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #742020;
+  color: #333;
 }
 
 .hidden {
   display: none;
 }
 
-/* Optional animation */
+/*  animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;

@@ -24,13 +24,14 @@
         </div>
         <div class="center-nav">
           <a href="#"><button class="nav-button">Home</button></a
-          ><a href="#"><button class="nav-button" id="insbtn">Instruction</button></a
+          ><a href="#"
+            ><button class="nav-button" id="insbtn">Instruction</button></a
           ><a href="#"
             ><button class="nav-button contact">Contact Us</button></a
           >
         </div>
         <div class="log-nav">
-          <a 
+          <a
             ><button class="nav-button" id="logout-btn">
               <i class="fa-solid fa-right-from-bracket"></i></button
           ></a>
@@ -99,45 +100,126 @@
           <div class="btn-center">
             <button id="getbtn">🔎 Get News</button>
           </div>
-          
         </form>
       </div>
       <div class="panel right" id="rightpanel">
-        <div class="news-container" id="show"></div>
-      </div>
-      
-            <!-- Instruction Popup for Home Page -->
-      <div id="homeInstructionPopup" class="instruction-overlay hidden">
-        <div class="instruction-box">
-          <button class="close-btn" onclick="closeInstruction()">✖</button>
-          <h2>📝 Instructions for Home Page</h2>
-          <p>Welcome to the News App! Here's how you can use the filters to find the news you want:</p>
-
-          <ul>
-            <li><strong>Breaking News:</strong> Click this to fetch the latest breaking news from all over the world instantly.</li>
-            <li><strong>Get News:</strong> Use this after selecting filters to get customized news.</li>
-          </ul>
-
-          <p><strong>Filter Options:</strong></p>
-          <ul>
-            <li><strong>Search:</strong> Enter keywords related to the news you're looking for.</li>
-            <li><strong>Country:</strong> Choose a country to get localized news (this takes priority over category if both are selected).</li>
-            <li><strong>Category:</strong> Choose a news category like sports, business, health, etc.</li>
-            <li><strong>From Date & To Date:</strong> Select a date range for the news articles.</li>
-            <li><strong>Sort By:</strong> Choose how results are sorted: latest, relevancy, or popularity.</li>
-            <li><strong>Language:</strong> Select the language for the news. Default is English.</li>
-            <li>
-              <strong>Note:</strong>
-              If ApiKey Problem Occurs Logout and then Again Submit the Credential Carefull while filling The API KEY
-            </li>
-            <br>
-          </ul>
-
-          <p>Once you've selected your filters, click <strong>Get News</strong> to view your results.</p>
+        <div id="gotop"></div>
+        <div class="news-container news-item" id="show">
+          <img src="./assests/images/welcome.png" alt="No Image" />
+          <div class="news-heading">
+            <h2>Start Searching Your News</h2>
+          </div>
+          <div class="sub-heading">
+            <h3>By Breaking News Or Filter Based News As You Wish</h3>
+          </div>
+          <div class="news-content">
+            <ul>
+              <li>
+                Breaking News Button
+                <ul>
+                  <li>To get Breking News</li>
+                </ul>
+              </li>
+              <li>
+                Get News Button
+                <ul>
+                  <li>
+                    After Selecting Filters hit Get news to get news based on
+                    selected filters
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- Instruction Popup for Home Page -->
+    <div id="homeInstructionPopup" class="instruction-overlay hidden">
+      <div class="instruction-box">
+        <button class="close-btn" onclick="closeInstruction()">✖</button>
+        <h2>📝 Instructions</h2>
+        <p>
+          Welcome to the News App! Here's how you can use the filters to find
+          the news you want:
+        </p>
 
-    <footer class="footer"></footer>
+        <ul>
+          <li>
+            <strong>Breaking News:</strong> Click this to fetch the latest
+            breaking news from all over the world instantly.
+          </li>
+          <li>
+            <strong>Get News:</strong> Use this after selecting filters to get
+            customized news.
+          </li>
+        </ul>
+
+        <p><strong>Filter Options:</strong></p>
+        <ul>
+          <li>
+            <strong>Search:</strong> Enter keywords related to the news you're
+            looking for.
+          </li>
+          <li>
+            <strong>Country:</strong> Choose a country to get localized news
+            (this takes priority over category if both are selected).
+          </li>
+          <li>
+            <strong>Category:</strong> Choose a news category like sports,
+            business, health, etc.
+          </li>
+          <li>
+            <strong>From Date & To Date:</strong> Select a date range for the
+            news articles.
+          </li>
+          <li>
+            <strong>Sort By:</strong> Choose how results are sorted: latest,
+            relevancy, or popularity.
+          </li>
+          <li>
+            <strong>Language:</strong> Select the language for the news. Default
+            is English.
+          </li>
+          <li>
+            <strong>Note:</strong>
+            If ApiKey Problem Occurs Logout and then Again Submit the Credential
+            Carefull while filling The API KEY
+          </li>
+          <br />
+        </ul>
+
+        <p>
+          Once you've selected your filters, click <strong>Get News</strong> to
+          view your results.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="contact">
+        <p>Contact: <a href="tel:+919084987092">9084987092</a></p>
+        <p>
+          Email: <a href="mailto:abhic4170@gmai.com">abhic4170@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="copyright">
+        <p>
+          &copy; By
+          <a href="https://www.linkedin.com/in/abhisheksinghchauhan786/"
+            >Abhishek Singh Chauhan</a
+          >
+        </p>
+        <p>
+          &hearts; Made By
+          <a href="https://www.linkedin.com/in/abhisheksinghchauhan786/"
+            >Abhishek Singh Chauhan</a
+          >
+        </p>
+        <p>Emerging Software Developer.</p>
+      </div>
+    </footer>
     <script src="./public/scripts/homeloader.js"></script>
   </body>
 </html>

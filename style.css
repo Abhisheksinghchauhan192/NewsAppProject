@@ -8,7 +8,6 @@
 
 body {
   background-color: black;
-  overflow: hidden;
 }
 
 .header {
@@ -351,5 +350,9 @@ label {
   #typewriter {
     margin-top: 15rem;
     font-size: 2rem;
+  }
+  /* remove the contact link from page  */
+  #contact-link{
+    display: none;
   }
 }
