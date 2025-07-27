@@ -26,7 +26,7 @@ function typewriter(){
         charIndex++;
         setTimeout(typewriter,100);
     }else{
-        //delat before erasing the msg..
+        //delete before erasing the msg..
         setTimeout(eraseText,1500);
     }
 

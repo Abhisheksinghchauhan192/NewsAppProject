@@ -48,6 +48,7 @@ function closeInstruction() {
 getbtn.addEventListener("click", (event) => {
   event.preventDefault(); // prevent it from submitting the form
 
+
   const q = document.getElementById("Search").value;
   const country = document.getElementById("Country").value;
   const category = document.getElementById("Category").value;
@@ -57,13 +58,11 @@ getbtn.addEventListener("click", (event) => {
   const language = document.getElementById("language").value; 
 
 
-  console.log(q);
-  console.log(country);
-  console.log(category);
-  console.log(from);
-  console.log(to);
-  console.log(sortBy);
-  console.log(language);
+  if(!q && !country && !category){
+    alert("Include the KeyWord to search with Other filters than country and category");
+    document.getElementById("Search").focus();
+    return;
+  }
 
   let query = "https://newsapi.org/v2/everything?";
   if (q) {
@@ -96,11 +95,12 @@ getbtn.addEventListener("click", (event) => {
   }
   query += `apiKey=${localStorage.getItem("newsProjectUserApiKey")}`;
   
-  if(!q && !country && !category && !from && !to){
+  if(!q && !country && !category ){
     query = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${localStorage.getItem(
       "newsProjectUserApiKey"
     )}`;
   }
+  
   // make fetch request for the news.
   fetch(query)
     .then((res) => res.json())
